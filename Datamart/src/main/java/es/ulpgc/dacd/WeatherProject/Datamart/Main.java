@@ -1,14 +1,14 @@
-package es.ulpgc.dacd.WeatherProject.DataMartProvider;
+package es.ulpgc.dacd.WeatherProject.Datamart;
 
-import es.ulpgc.dacd.WeatherProject.DataLakeFeeder.Storage.FileDataLake;
+import es.ulpgc.dacd.WeatherProject.Datamart.controller.DatamartController;
+import es.ulpgc.dacd.WeatherProject.Datamart.database.SqliteDatabase;
+import es.ulpgc.dacd.WeatherProject.Feeder.datalake.FileDataLake;
 
-import java.io.IOException;
-import java.sql.SQLException;
 
 public class Main {
-    public static void main(String[] args) throws IOException, SQLException {
+    public static void main(String[] args) {
         String url = "jdbc:sqlite:./datamart.db";
-        DataMartController controller = new DataMartController(new SqliteDataBase(url), new FileDataLake());
+        DatamartController controller = new DatamartController(new SqliteDatabase(url), new FileDataLake());
         controller.execute();
     }
 }
