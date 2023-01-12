@@ -12,10 +12,10 @@ import java.util.List;
 
 import static spark.Spark.get;
 
-public class WebService {
+public class WebServiceSparkGetFunctions {
     private final Database database;
 
-    public WebService(SqliteDatabase database){
+    public WebServiceSparkGetFunctions(SqliteDatabase database){
         this.database = database;
     }
     public void startGetSparkFunctions() {

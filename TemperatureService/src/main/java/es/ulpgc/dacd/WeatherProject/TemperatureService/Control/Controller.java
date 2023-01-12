@@ -1,7 +1,7 @@
 package es.ulpgc.dacd.WeatherProject.TemperatureService.Control;
 
 import es.ulpgc.dacd.WeatherProject.Datamart.database.SqliteDatabase;
-import es.ulpgc.dacd.WeatherProject.TemperatureService.view.WebService;
+import es.ulpgc.dacd.WeatherProject.TemperatureService.view.WebServiceSparkGetFunctions;
 
 public class Controller {
     private final String url;
@@ -11,7 +11,7 @@ public class Controller {
     }
 
     public void execute(){
-        WebService webService = new WebService(new SqliteDatabase(url));
+        WebServiceSparkGetFunctions webService = new WebServiceSparkGetFunctions(new SqliteDatabase(url));
         webService.startGetSparkFunctions();
     }
 }
