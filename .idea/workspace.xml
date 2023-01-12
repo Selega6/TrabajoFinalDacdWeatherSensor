@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Datamart:jar" />
+      <artifact name="Feeder:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="Code reformated and artifacts added, 3rd time">
+    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="Improvement in Datamart module and a bit of refactoring">
+      <change afterPath="$PROJECT_DIR$/TemperatureService/src/main/java/es/ulpgc/dacd/WeatherProject/TemperatureService/Control/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/controller/DatamartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/controller/DatamartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/DatabaseTablesGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/DatabaseTablesGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/SqliteDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/SqliteDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/databaseTables/SqliteMaxTemperatureTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/databaseTables/SqliteMaxTemperatureTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/databaseTables/SqliteMinTemperatureTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/databaseTables/SqliteMinTemperatureTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/datalake/DataLake.java" beforeDir="false" afterPath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/datalake/Datalake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/datalake/FileDataLake.java" beforeDir="false" afterPath="$PROJECT_DIR$/Feeder/src/main/java/es/ulpgc/dacd/WeatherProject/Feeder/datalake/FileDatalake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Feeder_jar/Feeder.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Feeder_jar/Feeder.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemperatureService/src/main/java/es/ulpgc/dacd/WeatherProject/TemperatureService/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureService/src/main/java/es/ulpgc/dacd/WeatherProject/TemperatureService/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemperatureService/src/main/java/es/ulpgc/dacd/WeatherProject/TemperatureService/view/WebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureService/src/main/java/es/ulpgc/dacd/WeatherProject/TemperatureService/view/WebService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673537883037</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Improvement in Datamart module and a bit of refactoring">
+      <created>1673548113160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673548113160</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +179,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code reformated and artifacts added" />
     <MESSAGE value="Code reformated and artifacts added, 3rd time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code reformated and artifacts added, 3rd time" />
+    <MESSAGE value="Improvement in Datamart module and a bit of refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvement in Datamart module and a bit of refactoring" />
   </component>
 </project>

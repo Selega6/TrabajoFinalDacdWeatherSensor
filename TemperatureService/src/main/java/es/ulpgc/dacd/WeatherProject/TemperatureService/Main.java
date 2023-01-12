@@ -1,12 +1,11 @@
 package es.ulpgc.dacd.WeatherProject.TemperatureService;
 
-import es.ulpgc.dacd.WeatherProject.Datamart.database.SqliteDatabase;
-import es.ulpgc.dacd.WeatherProject.TemperatureService.view.WebService;
+import es.ulpgc.dacd.WeatherProject.TemperatureService.Control.Controller;
 
 public class Main {
     public static void main(String[] args) {
         String url = "jdbc:sqlite:./datamart.db";
-        WebService webService = new WebService(new SqliteDatabase(url));
-        webService.start();
+        Controller controller = new Controller(url);
+        controller.execute();
     }
 }

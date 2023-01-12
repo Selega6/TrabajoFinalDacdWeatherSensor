@@ -18,7 +18,7 @@ public class WebService {
     public WebService(SqliteDatabase database){
         this.database = database;
     }
-    public void start() {
+    public void startGetSparkFunctions() {
         get("/v1/places/with-max-temperature", (req, res) ->
         {
             res.type("application/json");
