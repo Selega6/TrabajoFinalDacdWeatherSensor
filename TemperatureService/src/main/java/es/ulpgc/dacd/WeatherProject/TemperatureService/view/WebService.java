@@ -24,7 +24,7 @@ public class WebService {
             res.type("application/json");
             String dateFrom = req.queryParams("from");
             String dateTo = req.queryParams("to");
-            List<Weather> weatherList = database.getMaxTemperatureTable().getDataTableUsingDates(dateFrom, dateTo);
+            List<Weather> weatherList = database.tablesGetter().getMaxTemperatureTable().getDataTableUsingDates(dateFrom, dateTo);
             return weatherList.stream().map(this::toWeatherForAPIForMax).toList();
         });
         get("/v1/places/with-min-temperature", (req, res) ->
@@ -32,7 +32,7 @@ public class WebService {
             res.type("application/json");
             String dateFrom = req.queryParams("from");
             String dateTo = req.queryParams("to");
-            List<Weather> weatherList = database.getMinTemperatureTable().getDataTableUsingDates(dateFrom, dateTo);
+            List<Weather> weatherList = database.tablesGetter().getMinTemperatureTable().getDataTableUsingDates(dateFrom, dateTo);
             return weatherList.stream().map(this::toWeatherForAPIForMin).toList();
         });
     }

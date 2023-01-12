@@ -1,6 +1,6 @@
 package es.ulpgc.dacd.WeatherProject.Feeder.controller;
 
-import es.ulpgc.dacd.WeatherProject.Feeder.datalake.FileDataLake;
+import es.ulpgc.dacd.WeatherProject.Feeder.datalake.FileDatalake;
 import es.ulpgc.dacd.WeatherProject.Feeder.model.weatherSensor.AemetSensor;
 import es.ulpgc.dacd.WeatherProject.Feeder.model.Weather;
 
@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Controller {
     private final AemetSensor aemetSensor;
-    private final FileDataLake fileDataLake;
+    private final FileDatalake fileDataLake;
 
-    public Controller(AemetSensor aemetSensor, FileDataLake fileDataLake) {
+    public Controller(AemetSensor aemetSensor, FileDatalake fileDataLake) {
         this.aemetSensor = aemetSensor;
         this.fileDataLake = fileDataLake;
     }
@@ -24,7 +24,7 @@ public class Controller {
         ses.scheduleAtFixedRate(() -> programExecution(aemetSensor, fileDataLake), 0, 1, TimeUnit.HOURS);
     }
 
-    private static void programExecution(AemetSensor aemetSensor, FileDataLake fileDataLake) {
+    private static void programExecution(AemetSensor aemetSensor, FileDatalake fileDataLake) {
         List<Weather> weathersList;
         try {
             weathersList = aemetSensor.read( 27.5, 28.4,  (double) -16, (double) -15);

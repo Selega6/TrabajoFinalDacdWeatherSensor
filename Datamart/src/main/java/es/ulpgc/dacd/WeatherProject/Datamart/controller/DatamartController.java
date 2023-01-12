@@ -1,7 +1,7 @@
 package es.ulpgc.dacd.WeatherProject.Datamart.controller;
 
 import es.ulpgc.dacd.WeatherProject.Datamart.database.Database;
-import es.ulpgc.dacd.WeatherProject.Feeder.datalake.FileDataLake;
+import es.ulpgc.dacd.WeatherProject.Feeder.datalake.FileDatalake;
 import es.ulpgc.dacd.WeatherProject.Feeder.model.Weather;
 
 import java.io.File;
@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public class DatamartController {
     private final Database dataBase;
-    private final FileDataLake fileDataLake;
+    private final FileDatalake fileDataLake;
 
-    public DatamartController(Database dataBase, FileDataLake fileDataLake){
+    public DatamartController(Database dataBase, FileDatalake fileDataLake){
         this.dataBase = dataBase;
         this.fileDataLake = fileDataLake;
     }
@@ -28,7 +28,7 @@ public class DatamartController {
         },16,3600,TimeUnit.SECONDS);
     }
 
-    private static void programExecution(Database dataBase, FileDataLake fileDataLake) {
+    private static void programExecution(Database dataBase, FileDatalake fileDataLake) {
         initializingTables(dataBase);
         File directoryPath = new File("./datalake");
         File[] filesList = directoryPath.listFiles();
@@ -47,11 +47,11 @@ public class DatamartController {
 
 
     private static void addingMaxAndMinTemperatureToDataBase(Database dataBase, List<Weather> maxWeathersList, List<Weather> minWeathersList) {
-        minWeathersList.forEach(o -> dataBase.getMinTemperatureTable().insertIntoTable(o));
-        maxWeathersList.forEach(o -> dataBase.getMaxTemperatureTable().insertIntoTable(o));
+        minWeathersList.forEach(o -> dataBase.tablesGetter().getMinTemperatureTable().insertIntoTable(o));
+        maxWeathersList.forEach(o -> dataBase.tablesGetter().getMaxTemperatureTable().insertIntoTable(o));
     }
 
-    private static void getMaxAndMinTemperatureToList(FileDataLake fileDataLake, List<Weather> maxWeathersList, List<Weather> minWeathersList, File file) throws IOException {
+    private static void getMaxAndMinTemperatureToList(FileDatalake fileDataLake, List<Weather> maxWeathersList, List<Weather> minWeathersList, File file) throws IOException {
         String fileName = file.getName();
         String date = fileName.replace(".events", "");
         List<Weather> weathersList = fileDataLake.get(date);
@@ -60,8 +60,8 @@ public class DatamartController {
     }
 
     private static void initializingTables(Database dataBase) {
-        dataBase.getMaxTemperatureTable().createTable();
-        dataBase.getMinTemperatureTable().createTable();
+        dataBase.tablesGetter().getMaxTemperatureTable().createTable();
+        dataBase.tablesGetter().getMinTemperatureTable().createTable();
     }
 
     private static Weather minTempWeatherFinder(List<Weather> weathersList) {

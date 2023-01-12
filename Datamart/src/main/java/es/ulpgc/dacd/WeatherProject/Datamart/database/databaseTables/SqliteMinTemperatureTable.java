@@ -22,7 +22,7 @@ public class SqliteMinTemperatureTable implements DatabaseTable {
     @Override
     public void createTable() {
         final String SQL = "CREATE TABLE IF NOT EXISTS MinTemperatureTable (Date TEXT PRIMARY KEY, Time TEXT, Place TEXT, Station Text, MinTemperature REAL);";
-        try (Connection con = SqliteDatabase.getConnection(url); Statement statement = con.createStatement()) {
+        try (Connection con = SqliteDatabase.getConnection(); Statement statement = con.createStatement()) {
             statement.executeUpdate(SQL);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -34,7 +34,7 @@ public class SqliteMinTemperatureTable implements DatabaseTable {
         final String SQL = "INSERT OR REPLACE INTO MinTemperatureTable VALUES(date(?), ?, ?, ?, ?)";
         LocalDate date = LocalDate.of(weather.timeStamp().getYear(), weather.timeStamp().getMonth(), weather.timeStamp().getDayOfYear());
         LocalTime time = LocalTime.of(weather.timeStamp().getHour(), weather.timeStamp().getMinute(), weather.timeStamp().getSecond());
-        try (Connection con = SqliteDatabase.getConnection(url);
+        try (Connection con = SqliteDatabase.getConnection();
              PreparedStatement ps = con.prepareStatement(SQL)) {
             preparingStatementsForInsert(weather, date, time, ps);
             ps.executeUpdate();
@@ -52,7 +52,7 @@ public class SqliteMinTemperatureTable implements DatabaseTable {
         LocalDate dateFromFormatted = LocalDate.parse(dateFrom, formatter);
         LocalDate dateToFormatted = LocalDate.parse(dateTo, formatter);
         List<Weather> result = new ArrayList<>();
-        try (Connection conn = SqliteDatabase.getConnection(url);
+        try (Connection conn = SqliteDatabase.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             preparingDatesForSelectStatement(pstmt, dateFromFormatted.toString(), dateToFormatted.toString());
             ResultSet rs = pstmt.executeQuery();
