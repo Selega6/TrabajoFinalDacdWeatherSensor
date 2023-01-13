@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Datamart:jar" />
+      <artifact name="Feeder:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="Controller added in TemperatureService module">
+    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="a class has been renamed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673549131915</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="a class has been renamed">
+      <created>1673625352217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673625352217</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +201,7 @@
     <MESSAGE value="Code reformated and artifacts added, 3rd time" />
     <MESSAGE value="Improvement in Datamart module and a bit of refactoring" />
     <MESSAGE value="Controller added in TemperatureService module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller added in TemperatureService module" />
+    <MESSAGE value="a class has been renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="a class has been renamed" />
   </component>
 </project>

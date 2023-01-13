@@ -3,7 +3,7 @@ package es.ulpgc.dacd.WeatherProject.Datamart.database;
 import es.ulpgc.dacd.WeatherProject.Datamart.database.databaseTables.SqliteMaxTemperatureTable;
 import es.ulpgc.dacd.WeatherProject.Datamart.database.databaseTables.SqliteMinTemperatureTable;
 
-public class SqliteDatabaseTablesGetter {
+public class SqliteDatabaseTablesGetter implements DatabaseTablesGetter{
     private final SqliteMaxTemperatureTable MaxTemperatureTable;
     private final SqliteMinTemperatureTable MinTemperatureTable;
 
