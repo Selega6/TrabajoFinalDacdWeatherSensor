@@ -3,11 +3,11 @@ package es.ulpgc.dacd.WeatherProject.Datamart.database;
 import es.ulpgc.dacd.WeatherProject.Datamart.database.databaseTables.SqliteMaxTemperatureTable;
 import es.ulpgc.dacd.WeatherProject.Datamart.database.databaseTables.SqliteMinTemperatureTable;
 
-public class DatabaseTablesGetter {
+public class SqliteDatabaseTablesGetter {
     private final SqliteMaxTemperatureTable MaxTemperatureTable;
     private final SqliteMinTemperatureTable MinTemperatureTable;
 
-    public DatabaseTablesGetter(String url) {
+    public SqliteDatabaseTablesGetter(String url) {
         this.MaxTemperatureTable = new SqliteMaxTemperatureTable(url);
         this.MinTemperatureTable = new SqliteMinTemperatureTable(url);
     }

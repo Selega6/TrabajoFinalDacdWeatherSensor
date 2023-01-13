@@ -8,11 +8,11 @@ import java.util.logging.Logger;
 
 public class SqliteDatabase implements Database {
     private static String url;
-    private final DatabaseTablesGetter databaseTables;
+    private final SqliteDatabaseTablesGetter databaseTables;
 
     public SqliteDatabase(String url) {
         SqliteDatabase.url = url;
-        this.databaseTables = new DatabaseTablesGetter(url);
+        this.databaseTables = new SqliteDatabaseTablesGetter(url);
     }
 
 
@@ -26,7 +26,7 @@ public class SqliteDatabase implements Database {
         return connection;
     }
 
-    public DatabaseTablesGetter tablesGetter() {
+    public SqliteDatabaseTablesGetter tablesGetter() {
         return databaseTables;
     }
 }
