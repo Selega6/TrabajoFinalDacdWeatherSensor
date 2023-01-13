@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Feeder:jar" />
+      <artifact name="Datamart:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="a class has been renamed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Datamart_jar/Datamart.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TemperatureService_jar/TemperatureService.jar" afterDir="false" />
+    <list default="true" id="475cd50f-c8bb-4292-9525-a119b6766f84" name="Changes" comment="added interface for DatabaseTablesGetter">
+      <change beforePath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/Datamart/src/main/java/es/ulpgc/dacd/WeatherProject/Datamart/database/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673625352217</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added interface for DatabaseTablesGetter">
+      <created>1673628936372</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673628936372</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +207,7 @@
     <MESSAGE value="Improvement in Datamart module and a bit of refactoring" />
     <MESSAGE value="Controller added in TemperatureService module" />
     <MESSAGE value="a class has been renamed" />
-    <option name="LAST_COMMIT_MESSAGE" value="a class has been renamed" />
+    <MESSAGE value="added interface for DatabaseTablesGetter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added interface for DatabaseTablesGetter" />
   </component>
 </project>
